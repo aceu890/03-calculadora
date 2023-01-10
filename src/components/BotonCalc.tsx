@@ -6,26 +6,22 @@ interface Props {
     texto: string;
     color?: string;
     ancho?: boolean;
+    action: ( numeroTexto: string) => void; 
 }
 
-export const BotonCalc = ({ texto, color = '#2D2D2D', ancho = false }: Props) => {
+export const BotonCalc = ({ texto, color = '#17202A', ancho = false, action }: Props) => {
     return (
-        <TouchableOpacity>
-            <View style={{
-                ...styles.boton,
-                backgroundColor: color,
-                width: (ancho) ? 180 : 80 // estira el boton 0
+        <TouchableOpacity
+            onPress={ () => action( texto )  }
+        >
+            <View style={{ ...styles.boton, backgroundColor: color, width: (ancho) ? 180 : 80 }}>
 
+                <Text style={{ ...styles.botonTexto, color: (color === '#5DADE2') ? 'black' : 'white'}}> {texto} </Text>
 
-            }}>
-                <Text style={{
-                    ...styles.botonTexto,
-                    color: (color === '#9B9B9B') ? 'black' : 'white'  // cambia de color los botones si se cumple cierta condición
-
-                }}>{texto}</Text>
             </View>
         </TouchableOpacity>
-
     );
 }
+
+
 

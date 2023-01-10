@@ -12,12 +12,13 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },  
     resultado: {
-        color: 'white',
+        color: '#EBF5FB',
         fontSize: 60,
         textAlign: 'right',
+        marginBottom: 10,
     },
     resultadoPequeno: {
-        color: 'rgba(255,255,255,0.5)',
+        color: 'rgba(209, 242, 235,0.5)',
         fontSize: 30,
         textAlign: 'right',
     },
@@ -30,7 +31,7 @@ export const styles = StyleSheet.create({
     boton: {
         height:80,
         width: 80,
-        backgroundColor: '#2D2D2D',
+        // backgroundColor: '#229954',
         borderRadius: 100,
         justifyContent: 'center',
         marginHorizontal: 10,
